@@ -18,6 +18,7 @@ model Inbox {
   email_addresse  String
   message_title   String
   message_content String
+  created_at      String
 
   @@map("emails_received")
 }
