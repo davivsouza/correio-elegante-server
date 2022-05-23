@@ -5,6 +5,7 @@ export interface InboxCreateData {
   message_content: string;
   name_sender:string
   photoURL_sender:string
+  created_at:string
 }
 
 export interface InboxRepository{

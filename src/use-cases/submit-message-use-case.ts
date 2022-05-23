@@ -7,6 +7,7 @@ interface SubmitMessageUseCaseRequest {
   message_content: string;
   name_sender: string;
   photoURL_sender: string;
+  created_at:string
 }
 
 export class SubmitMessageUseCase {
@@ -20,6 +21,7 @@ export class SubmitMessageUseCase {
       message_title,
       name_sender,
       photoURL_sender,
+      created_at
     } = request;
 
     await this.inboxRepository.create({
@@ -29,7 +31,7 @@ export class SubmitMessageUseCase {
       message_title,
       name_sender,
       photoURL_sender,
-      
+      created_at
     });
   }
 }

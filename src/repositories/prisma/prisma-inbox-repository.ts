@@ -3,7 +3,7 @@ import { InboxCreateData, InboxRepository } from "../inbox-repository";
 
 export class PrismaInboxRepository implements InboxRepository {
   async create({email_addresse,email_sender,message_content,message_title, name_sender,
-    photoURL_sender}: InboxCreateData) {
+    photoURL_sender,created_at}: InboxCreateData) {
     await prisma.inbox.create({
       data: {
         name_sender,
@@ -12,7 +12,7 @@ export class PrismaInboxRepository implements InboxRepository {
         email_sender,
         message_content,
         message_title,
-        
+        created_at
       },
     });
   }
