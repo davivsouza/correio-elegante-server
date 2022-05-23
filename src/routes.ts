@@ -14,6 +14,7 @@ router.post("/message", async (req, res) => {
     email_addresse,
     message_title,
     message_content,
+    created_at
   } = req.body;
 
   const submitMessageUseCase = new SubmitMessageUseCase(prismaInboxRepository);
@@ -25,7 +26,7 @@ router.post("/message", async (req, res) => {
     email_addresse,
     message_title,
     message_content,
-    
+    created_at
   });
 });
 
